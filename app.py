@@ -13,7 +13,7 @@ def hello():
     try:
         visits = redis.incr("counter")
     except RedisError:
-        visits = "<i>>Welcome to devops training</i>"
+        visits = "<i>>Redis error</i>"
 
     html = "<h3>My name is {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
